@@ -25,7 +25,7 @@ https://kilimanjaro-a2.github.io/SpritePositionAdjuster/
 
 On the UnityEditor, place a sprite in the scene with an arbitrary aspect ratio, and set the position and scale.
 
-Then attach SpritePositionAdjuster.cs to the GameObject which has the SpriteRenderer component.
+Then attach [SpritePositionAdjuster.cs](https://github.com/Kilimanjaro-a2/SpritePositionAdjuster/blob/master/Assets/Plugins/SpritePositionAdjuster/SpritePositionAdjuster.cs) to the GameObject which has the SpriteRenderer component.
 
 When you start the scene, the current GameView height is displayed on the console.
 
