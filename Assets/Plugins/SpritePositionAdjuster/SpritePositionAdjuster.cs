@@ -4,10 +4,10 @@ namespace KiliWare
 {
     public class SpritePositionAdjuster : MonoBehaviour
     {
+        public float OriginalScreenHeight = 0f;
+        public bool KeepsPositionUpdated = true;
         protected Vector2 startPos;
         protected Vector2 startLocalScale;
-        [SerializeField] protected float originalHeight;
-        [SerializeField] protected bool keepsPositionUpdated = false;
         protected int beforeScreenWidth;
         protected int beforeScreenHeight;
 
@@ -17,7 +17,7 @@ namespace KiliWare
             startPos = transform.position - Camera.main.transform.position;
 
             #if UNITY_EDITOR
-                Debug.Log("Current screen height is: " + Screen.height + ". If you want to preserve current scale and position of this sprites, set originalHeight property " + Screen.height + " and restart the scene to check whether it works correctly.");
+                Debug.Log("Current screen height is: " + Screen.height + ". If you want to preserve current scale and position of this sprites, set OriginalScreenHeight property " + Screen.height + " and restart the scene to check whether it works correctly.");
             #endif
 
             beforeScreenWidth = Screen.width;
@@ -28,7 +28,7 @@ namespace KiliWare
         
         protected void adjustSpritePosition()
         {
-            float ajustedHeight = originalHeight / Screen.height;
+            float ajustedHeight = OriginalScreenHeight / Screen.height;
 
             transform.localScale = new Vector2(startLocalScale.x, startLocalScale.y) * ajustedHeight;
 
@@ -37,11 +37,11 @@ namespace KiliWare
             transform.position = adjustedPosition;
         }
 
-        // When you checkes "keepsPositionUpdated",
+        // When you checkes "KeepsPositionUpdated",
         // the sprite position's change follows the change of window size. 
         protected void Update()
         {
-            if (keepsPositionUpdated && isScreenSizeChanged())
+            if (KeepsPositionUpdated && isScreenSizeChanged())
             {
                 adjustSpritePosition();
                 beforeScreenWidth = Screen.width;

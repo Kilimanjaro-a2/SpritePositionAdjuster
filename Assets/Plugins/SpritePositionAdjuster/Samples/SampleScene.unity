@@ -483,8 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbb9cf55a361f945adc7660d4a11e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalHeight: 540
-  keepsPositionUpdated: 1
+  OriginalScreenHeight: 520
+  KeepsPositionUpdated: 1
 --- !u!212 &793498384
 SpriteRenderer:
   m_ObjectHideFlags: 0
