@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalHeight: 540
-  keepsPositionUpdated: 0
+  keepsPositionUpdated: 1
 --- !u!212 &498589868
 SpriteRenderer:
   m_ObjectHideFlags: 0
