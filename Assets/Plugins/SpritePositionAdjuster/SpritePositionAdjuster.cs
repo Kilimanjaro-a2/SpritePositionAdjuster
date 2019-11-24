@@ -32,9 +32,8 @@ namespace KiliWare
 
             transform.localScale = new Vector2(startScale.x, startScale.y) * ajustedHeight;
 
-            Vector2 adjustedPosition = startPosition * ajustedHeight;
-            adjustedPosition.y += Camera.main.transform.position.y;
-            transform.position = adjustedPosition;
+            Vector2 cameraPos = Camera.main.transform.position;
+            transform.position = startPosition * ajustedHeight + cameraPos;
         }
 
         // When you checkes "KeepsPositionUpdated",
