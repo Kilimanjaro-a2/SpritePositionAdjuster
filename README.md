@@ -6,6 +6,8 @@
 
 This script preserves the sprite's position and scale and can reproduce the same look even if the aspect ratio or height of the screen changes.
 
+![AnimationGif](https://user-images.githubusercontent.com/30808673/69492978-6fdc4a00-0eec-11ea-8b11-7790c0f83c59.gif)
+
 ## Demo
 
 This is a demo built with WebGL.
