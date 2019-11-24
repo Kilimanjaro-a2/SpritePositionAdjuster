@@ -265,7 +265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426915866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: -10}
+  m_LocalPosition: {x: 7, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498589866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.8, y: 4.14, z: 0}
+  m_LocalPosition: {x: -3.8, y: 4.14, z: 0}
   m_LocalScale: {x: 2.33, y: 2.33, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbb9cf55a361f945adc7660d4a11e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OriginalScreenHeight: 520
+  OriginalScreenHeight: 540
   KeepsPositionUpdated: 1
 --- !u!212 &793498384
 SpriteRenderer:
@@ -541,7 +541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793498382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.14, z: 0}
+  m_LocalPosition: {x: 7, y: 4.14, z: 0}
   m_LocalScale: {x: 2.33, y: 2.33, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
