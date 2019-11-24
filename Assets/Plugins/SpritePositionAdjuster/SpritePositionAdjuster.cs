@@ -7,12 +7,9 @@ namespace KiliWare
         protected Vector2 startPos;
         protected Vector2 startLocalScale;
         [SerializeField] protected float originalHeight;
-
-        #if UNITY_EDITOR
-            [SerializeField] protected bool keepsPositionUpdated = false;
-            protected int beforeScreenWidth;
-            protected int beforeScreenHeight;
-        #endif
+        [SerializeField] protected bool keepsPositionUpdated = false;
+        protected int beforeScreenWidth;
+        protected int beforeScreenHeight;
 
         void Awake()
         {
@@ -21,10 +18,10 @@ namespace KiliWare
 
             #if UNITY_EDITOR
                 Debug.Log("Current screen height is: " + Screen.height + ". If you want to preserve current scale and position of this sprites, set originalHeight property " + Screen.height + " and restart the scene to check whether it works correctly.");
-
-                beforeScreenWidth = Screen.width;
-                beforeScreenHeight = Screen.height;
             #endif
+
+            beforeScreenWidth = Screen.width;
+            beforeScreenHeight = Screen.height;
 
             adjustSpritePosition();
         }
@@ -40,22 +37,22 @@ namespace KiliWare
             transform.position = adjustedPosition;
         }
 
-        #if UNITY_EDITOR
-            protected void Update()
+        // When you checkes "keepsPositionUpdated",
+        // the sprite position's change follows the change of window size. 
+        protected void Update()
+        {
+            if (keepsPositionUpdated && isScreenSizeChanged())
             {
-                if (keepsPositionUpdated && isScreenSizeChanged())
-                {
-                    adjustSpritePosition();
-                    beforeScreenWidth = Screen.width;
-                    beforeScreenHeight = Screen.height;
-                }
+                adjustSpritePosition();
+                beforeScreenWidth = Screen.width;
+                beforeScreenHeight = Screen.height;
             }
+        }
 
-            protected bool isScreenSizeChanged()
-            {
-                return beforeScreenHeight != Screen.height || beforeScreenWidth != Screen.width;
-            }
-        #endif
+        protected bool isScreenSizeChanged()
+        {
+            return beforeScreenHeight != Screen.height || beforeScreenWidth != Screen.width;
+        }
     }
 }
 
