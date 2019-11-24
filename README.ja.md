@@ -27,7 +27,7 @@ https://kilimanjaro-a2.github.io/SpritePositionAdjuster/
 
 UnityEditor上で、任意のアスペクト比でスプライトをシーンに置き、位置やスケールを設定します。
 
-その後、SpritePositionAdjuster.csをスプライトレンダラーを持つゲームオブジェクトに対しアタッチします。
+その後、[SpritePositionAdjuster.cs](https://github.com/Kilimanjaro-a2/SpritePositionAdjuster/blob/master/Assets/Plugins/SpritePositionAdjuster/SpritePositionAdjuster.cs)をスプライトレンダラーを持つゲームオブジェクトに対しアタッチします。
 
 そしてシーンをスタートすると、今のゲームビューの高さがコンソールに表示されます。
 
