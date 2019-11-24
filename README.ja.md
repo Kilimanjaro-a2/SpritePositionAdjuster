@@ -8,7 +8,7 @@
 
 画面のアスペクト比や高さが変わっても同じ見た目を再現させることができます。
 
-![AnimationGif](https://user-images.githubusercontent.com/30808673/69492978-6fdc4a00-0eec-11ea-8b11-7790c0f83c59.gif)
+![GifAnimation](https://user-images.githubusercontent.com/30808673/69493070-8040f480-0eed-11ea-81a5-4b5bfb40aeba.gif)
 
 ## デモ
 
