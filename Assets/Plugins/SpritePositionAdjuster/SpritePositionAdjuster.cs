@@ -11,13 +11,20 @@ namespace KiliWare
         protected int previousScreenWidth;
         protected int previousScreenHeight;
 
+        #if UNITY_EDITOR
+            public bool showsDebugLog = true;
+        #endif
+
         protected void Awake()
         {
             startScale = transform.localScale;
             startPosition = transform.position - Camera.main.transform.position;
 
             #if UNITY_EDITOR
-                Debug.Log("Current screen height is: " + Screen.height + ". If you want to preserve current scale and position of this sprites, set OriginalScreenHeight property " + Screen.height + " and restart the scene to check whether it works correctly.");
+                if (showsDebugLog)
+                {
+                    Debug.Log("Current screen height is: " + Screen.height + ". If you want to preserve current scale and position of this sprites, set OriginalScreenHeight property " + Screen.height + " and restart the scene to check whether it works correctly.");
+                }
             #endif
 
             previousScreenWidth = Screen.width;
